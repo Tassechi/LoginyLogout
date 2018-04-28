@@ -18,6 +18,7 @@ public class Main2Activity extends AppCompatActivity {
         sal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                PreferenceManager.delPref(v.getContext(),PreferenceManager.PREF_SW1);
                 Intent intent = new Intent(Main2Activity.this, MainActivity.class);
                 startActivity(intent);
 

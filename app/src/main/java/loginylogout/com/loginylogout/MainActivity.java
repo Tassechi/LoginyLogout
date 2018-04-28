@@ -33,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
                     String username = ((EditText) findViewById(R.id.user)).getText().toString();
                     String password = ((EditText) findViewById(R.id.pass)).getText().toString();
 
-                    if (username.equals("edutec") & password.equals("12345")) {
+                    if (username.equals("Edutec") & password.equals("12345")) {
+                        PreferenceManager.setPref(v.getContext(),PreferenceManager.PREF_SW1,"1");
                         Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                         startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(getApplicationContext(), "Usuario Incorrecto", Toast.LENGTH_SHORT).show();
 
